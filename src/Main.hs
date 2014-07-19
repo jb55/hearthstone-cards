@@ -16,7 +16,7 @@ import Hearthstone.Card (pretty)
 
 readXml :: IO (Maybe Document)
 readXml = do
-  cards <- T.readFile "/home/jb55/cards.xml"
+  cards <- T.readFile "xml/cards.xml"
   let parsed = parseText def cards
   return $ parsed ^? _Right
 
